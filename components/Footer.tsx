@@ -1,7 +1,7 @@
 "use client";
 
 import { Separator } from "@/components/ui/separator";
-import { Instagram, Linkedin, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail, MessageCircle } from "lucide-react";
 
 const navigation = [
   { name: "Sobre", href: "#sobre" },
@@ -97,9 +97,10 @@ export default function Footer() {
                   href="https://wa.me/5581998132001"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/70 hover:text-white font-body text-xs md:text-sm transition-colors"
+                  className="text-white/70 hover:text-white font-body text-xs md:text-sm transition-colors flex items-center gap-2"
                 >
-                  +55 81 998132001
+                  <MessageCircle className="w-4 h-4" />
+                  Contato direto no WhatsApp
                 </a>
               </li>
             </ul>

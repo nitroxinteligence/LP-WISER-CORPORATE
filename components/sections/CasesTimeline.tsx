@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import CountUp from "react-countup";
 import { TrendingUp, Users, Target } from "lucide-react";
 
@@ -12,7 +11,6 @@ const cases = [
   {
     company: "LUVA BET",
     icon: TrendingUp,
-    tag: "iGaming",
     duration: "3 meses de campanha",
     results: [
       { label: "em depósitos incrementais", value: "+R$ 6M", prefix: "", isText: true },
@@ -22,7 +20,6 @@ const cases = [
   {
     company: "F12 BET",
     icon: Users,
-    tag: "iGaming",
     duration: "2 meses de implementação",
     results: [
       { label: "em receita adicional", value: "+R$ 4M", prefix: "", isText: true },
@@ -32,7 +29,6 @@ const cases = [
   {
     company: "CLUBE NÁUTICO",
     icon: Target,
-    tag: "Esportes",
     duration: "2 dias de campanha",
     results: [
       { label: "Campanha", value: "novos sócios", prefix: "", isText: true },
@@ -119,11 +115,6 @@ export default function CasesTimeline() {
                         </div>
 
                         <CardHeader className="relative">
-                          <div className="flex items-center justify-end mb-4">
-                            <Badge variant="outline" className="text-white/80 border-white/20">
-                              {caseItem.tag}
-                            </Badge>
-                          </div>
                           {/* Título - Padrão da App */}
                           <CardTitle className="text-white font-headings font-semibold text-2xl md:text-3xl lg:text-4xl">
                             {caseItem.company}
