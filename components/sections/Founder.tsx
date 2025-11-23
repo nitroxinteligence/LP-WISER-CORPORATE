@@ -31,7 +31,7 @@ export default function Founder() {
             <div className="relative p-[1px] rounded-xl bg-gradient-to-br from-[#1d232d] to-[#1D2024] h-full shadow-2xl shadow-black/50">
               <div className="relative h-full rounded-[11px] overflow-hidden bg-gradient-to-br from-[#151B25] to-[#000000]">
                 <Image
-                  src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/public/docs-wiser-corp/img-diego-sobre-2.jpeg"
+                  src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/public/docs-wiser-corp/img-diego-sobre-2%20(1)-redimensionado-para-1080x1620.jpeg"
                   alt="Diego Castro - Founder & CEO Wiser Corporate"
                   fill
                   className="object-cover object-top"
