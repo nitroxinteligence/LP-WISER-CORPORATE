@@ -377,7 +377,7 @@ export default function Solutions() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                     transition={{ duration: 0.6, delay: 0 * 0.1 }}
-                    className="sticky top-24"
+                    className="lg:sticky lg:top-24"
                   >
                     <div className="relative p-[1px] rounded-xl bg-gradient-to-br from-[#1d232d] to-[#1D2024] group">
                       <Card className="relative group
@@ -573,7 +573,7 @@ export default function Solutions() {
                     initial={{ opacity: 0, y: 40 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                     transition={{ duration: 0.6, delay: 2 * 0.1 }}
-                    className="sticky top-24"
+                    className="lg:sticky lg:top-24"
                   >
                     <div className="relative p-[1px] rounded-xl bg-gradient-to-br from-[#1d232d] to-[#1D2024] group">
                       <Card className="relative group
