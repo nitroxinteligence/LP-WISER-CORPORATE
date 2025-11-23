@@ -48,6 +48,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="dark">
+      <head>
+        <link
+          rel="preconnect"
+          href="https://ckwjxuxatlqnuxbfltul.supabase.co"
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://ckwjxuxatlqnuxbfltul.supabase.co"
+        />
+      </head>
       <body
         className={`${inter.variable} ${manrope.variable} font-body antialiased bg-background text-white`}
       >

@@ -62,14 +62,14 @@ export default function Problems() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-center p-8 md:p-10 lg:p-12 rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200"
+              className="text-center p-8 md:p-10 lg:p-12 rounded-2xl bg-gradient-to-br from-[#141A24] to-[#000101] border border-[#1C2026]"
             >
-              <p className="text-gray-800 font-body text-base md:text-lg lg:text-xl leading-relaxed mb-4">
-                <span className="font-semibold text-gray-900">
+              <p className="text-white/80 font-body text-base md:text-lg lg:text-xl leading-relaxed mb-4">
+                <span className="font-semibold text-white">
                   O problema não é seu produto ou serviço.
                 </span>
               </p>
-              <p className="text-gray-900 font-body text-lg md:text-xl lg:text-2xl font-semibold">
+              <p className="text-white font-body text-lg md:text-xl lg:text-2xl font-semibold">
                 É o modelo de comunicação ultrapassado.
                 <br />E é aqui que a Wiser Corporate entra.
               </p>

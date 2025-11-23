@@ -5,6 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Zap, Send, Target, BarChart3, Check, Image } from "lucide-react";
+import { LazyVideo } from "@/components/LazyVideo";
 
 const solutions = [
   {
@@ -190,10 +191,17 @@ export default function Solutions() {
               Inteligente, integrada e rentável
             </span>
           </div>
-          <h2 className="font-headings font-medium text-white mb-4
-            text-[28px] leading-[34px]
-            md:text-[36px] md:leading-[44px]
-            lg:text-[44px] lg:leading-[52px]
+          <h1 className="font-headings font-semibold text-white mb-3
+            text-[32px] leading-[38px]
+            md:text-[40px] md:leading-[48px]
+            lg:text-[48px] lg:leading-[56px]
+            tracking-tight">
+            Nossas Soluções
+          </h1>
+          <h2 className="font-headings font-normal text-white/80
+            text-[24px] leading-[30px]
+            md:text-[28px] md:leading-[36px]
+            lg:text-[32px] lg:leading-[40px]
             tracking-tight">
             A nova era da comunicação empresarial
           </h2>
@@ -215,20 +223,20 @@ export default function Solutions() {
                       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                       transition={{ duration: 0.6, delay: 0 * 0.1 }}
                     >
-                      <div className="relative p-[1px] rounded-xl bg-gradient-to-br from-[#1d232d] to-[#1D2024] group">
-                        <Card className="relative border-0 bg-gradient-to-br from-[#151B25] to-[#000000] transition-all duration-500 ease-out rounded-[11px]">
+                      <div className="relative p-[1px] rounded-xl bg-white group">
+                        <Card className="relative border-0 bg-white transition-all duration-500 ease-out rounded-[11px]">
                           {/* Gradient Border Effect on Hover */}
                           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                            <div className="absolute inset-[1px] bg-gradient-to-br from-[#151B25] to-[#000000] rounded-[inherit]" />
+                            <div className="absolute inset-[1px] bg-white rounded-[inherit]" />
                           </div>
 
                           <CardContent className="relative p-8 md:p-10 lg:p-12">
                             {/* Header Section */}
                             <div className="space-y-3 mb-10">
-                              <h3 className="text-white font-headings font-semibold text-2xl md:text-3xl lg:text-[32px] tracking-tight">
+                              <h3 className="text-gray-900 font-headings font-semibold text-2xl md:text-3xl lg:text-[32px] tracking-tight">
                                 {solutions[0].title}
                               </h3>
-                              <p className="text-white/60 font-body text-sm md:text-base leading-relaxed">
+                              <p className="text-gray-600 font-body text-sm md:text-base leading-relaxed">
                                 {solutions[0].subtitle}
                               </p>
                             </div>
@@ -245,15 +253,14 @@ export default function Solutions() {
                                 >
                                   {/* Feature Container */}
                                   <div className="relative rounded-lg
-                                    bg-gradient-to-br from-white/[0.03] to-transparent
-                                    border border-white/[0.06]
+                                    bg-gradient-to-br from-gray-50 to-transparent
+                                    border border-gray-200
                                     p-5 md:p-6
-                                    hover:bg-white/[0.05] hover:border-white/10
+                                    hover:bg-gray-100 hover:border-gray-300
                                     transition-all duration-300">
 
                                     {/* Feature Title */}
-                                    <h4 className="text-white/90 font-headings font-medium text-base md:text-lg mb-4 flex items-center gap-2">
-                                      <span className="w-1 h-4 bg-accent-primary rounded-full opacity-70" />
+                                    <h4 className="text-gray-900 font-headings font-medium text-base md:text-lg mb-4">
                                       {feature.title}
                                     </h4>
 
@@ -262,9 +269,9 @@ export default function Solutions() {
                                       {feature.items.map((item, itemIndex) => (
                                         <li
                                           key={itemIndex}
-                                          className="text-white/60 text-sm md:text-[15px] leading-relaxed
+                                          className="text-gray-700 text-sm md:text-[15px] leading-relaxed
                                             flex items-start gap-3
-                                            hover:text-white/80 transition-colors duration-200"
+                                            hover:text-gray-900 transition-colors duration-200"
                                         >
                                           <Check className="w-4 h-4 text-accent-primary/70 flex-shrink-0 mt-0.5
                                             group-hover/feature:text-accent-primary
@@ -277,7 +284,7 @@ export default function Solutions() {
 
                                   {/* Separator Line (except last item) */}
                                   {featureIndex < solutions[0].features.length - 1 && (
-                                    <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+                                    <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
                                   )}
                                 </motion.div>
                               ))}
@@ -330,8 +337,7 @@ export default function Solutions() {
                                     transition-all duration-300">
 
                                     {/* Feature Title */}
-                                    <h4 className="text-white/90 font-headings font-medium text-base md:text-lg mb-4 flex items-center gap-2">
-                                      <span className="w-1 h-4 bg-accent-primary rounded-full opacity-70" />
+                                    <h4 className="text-white/90 font-headings font-medium text-base md:text-lg mb-4">
                                       {feature.title}
                                     </h4>
 
@@ -383,25 +389,10 @@ export default function Solutions() {
 
                         <CardContent className="relative p-0 overflow-hidden rounded-[11px]">
                           <div className="w-full aspect-video max-h-[450px]">
-                            <video
-                              loop
-                              playsInline
-                              className="w-full h-full object-cover"
-                              onMouseEnter={(e) => {
-                                e.currentTarget.muted = false;
-                                e.currentTarget.play();
-                              }}
-                              onMouseLeave={(e) => {
-                                e.currentTarget.muted = true;
-                                e.currentTarget.pause();
-                              }}
-                            >
-                              <source
-                                src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/sign/docs-wiser-corp/video-1-homem.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8wZmZiNWI3ZC0wNWJkLTQxNTQtYTFlZS1kM2Y5MWFhMjc4ZDIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2NzLXdpc2VyLWNvcnAvdmlkZW8tMS1ob21lbS5tcDQiLCJpYXQiOjE3NjM3ODM4ODgsImV4cCI6MjExMDY3OTg4OH0.A_STL1QQeG4lXDxSSixHCNvTgjUOhWyTAf4H0M5_XXE"
-                                type="video/mp4"
-                              />
-                              Seu navegador não suporta vídeos HTML5.
-                            </video>
+                            <LazyVideo
+                              src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/sign/docs-wiser-corp/video-1-homem.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8wZmZiNWI3ZC0wNWJkLTQxNTQtYTFlZS1kM2Y5MWFhMjc4ZDIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2NzLXdpc2VyLWNvcnAvdmlkZW8tMS1ob21lbS5tcDQiLCJpYXQiOjE3NjM3ODM4ODgsImV4cCI6MjExMDY3OTg4OH0.A_STL1QQeG4lXDxSSixHCNvTgjUOhWyTAf4H0M5_XXE"
+                              className="w-full h-full"
+                            />
                           </div>
                         </CardContent>
                       </Card>
@@ -428,20 +419,20 @@ export default function Solutions() {
                       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                       transition={{ duration: 0.6, delay: 2 * 0.1 }}
                     >
-                      <div className="relative p-[1px] rounded-xl bg-gradient-to-br from-[#1d232d] to-[#1D2024] group">
-                        <Card className="relative border-0 bg-gradient-to-br from-[#151B25] to-[#000000] transition-all duration-500 ease-out rounded-[11px]">
+                      <div className="relative p-[1px] rounded-xl bg-white group">
+                        <Card className="relative border-0 bg-white transition-all duration-500 ease-out rounded-[11px]">
                           {/* Gradient Border Effect on Hover */}
                           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                            <div className="absolute inset-[1px] bg-gradient-to-br from-[#151B25] to-[#000000] rounded-[inherit]" />
+                            <div className="absolute inset-[1px] bg-white rounded-[inherit]" />
                           </div>
 
                           <CardContent className="relative p-8 md:p-10 lg:p-12">
                             {/* Header Section */}
                             <div className="space-y-3 mb-10">
-                              <h3 className="text-white font-headings font-semibold text-2xl md:text-3xl lg:text-[32px] tracking-tight">
+                              <h3 className="text-gray-900 font-headings font-semibold text-2xl md:text-3xl lg:text-[32px] tracking-tight">
                                 {solutions[2].title}
                               </h3>
-                              <p className="text-white/60 font-body text-sm md:text-base leading-relaxed">
+                              <p className="text-gray-600 font-body text-sm md:text-base leading-relaxed">
                                 {solutions[2].subtitle}
                               </p>
                             </div>
@@ -458,15 +449,14 @@ export default function Solutions() {
                                 >
                                   {/* Feature Container */}
                                   <div className="relative rounded-lg
-                                    bg-gradient-to-br from-white/[0.03] to-transparent
-                                    border border-white/[0.06]
+                                    bg-gradient-to-br from-gray-50 to-transparent
+                                    border border-gray-200
                                     p-5 md:p-6
-                                    hover:bg-white/[0.05] hover:border-white/10
+                                    hover:bg-gray-100 hover:border-gray-300
                                     transition-all duration-300">
 
                                     {/* Feature Title */}
-                                    <h4 className="text-white/90 font-headings font-medium text-base md:text-lg mb-4 flex items-center gap-2">
-                                      <span className="w-1 h-4 bg-accent-primary rounded-full opacity-70" />
+                                    <h4 className="text-gray-900 font-headings font-medium text-base md:text-lg mb-4">
                                       {feature.title}
                                     </h4>
 
@@ -475,9 +465,9 @@ export default function Solutions() {
                                       {feature.items.map((item, itemIndex) => (
                                         <li
                                           key={itemIndex}
-                                          className="text-white/60 text-sm md:text-[15px] leading-relaxed
+                                          className="text-gray-700 text-sm md:text-[15px] leading-relaxed
                                             flex items-start gap-3
-                                            hover:text-white/80 transition-colors duration-200"
+                                            hover:text-gray-900 transition-colors duration-200"
                                         >
                                           <Check className="w-4 h-4 text-accent-primary/70 flex-shrink-0 mt-0.5
                                             group-hover/feature:text-accent-primary
@@ -490,7 +480,7 @@ export default function Solutions() {
 
                                   {/* Separator Line (except last item) */}
                                   {featureIndex < solutions[2].features.length - 1 && (
-                                    <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+                                    <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
                                   )}
                                 </motion.div>
                               ))}
@@ -543,8 +533,7 @@ export default function Solutions() {
                                     transition-all duration-300">
 
                                     {/* Feature Title */}
-                                    <h4 className="text-white/90 font-headings font-medium text-base md:text-lg mb-4 flex items-center gap-2">
-                                      <span className="w-1 h-4 bg-accent-primary rounded-full opacity-70" />
+                                    <h4 className="text-white/90 font-headings font-medium text-base md:text-lg mb-4">
                                       {feature.title}
                                     </h4>
 
@@ -596,25 +585,10 @@ export default function Solutions() {
 
                         <CardContent className="relative p-0 overflow-hidden rounded-[11px]">
                           <div className="w-full aspect-video max-h-[450px]">
-                            <video
-                              loop
-                              playsInline
-                              className="w-full h-full object-cover"
-                              onMouseEnter={(e) => {
-                                e.currentTarget.muted = false;
-                                e.currentTarget.play();
-                              }}
-                              onMouseLeave={(e) => {
-                                e.currentTarget.muted = true;
-                                e.currentTarget.pause();
-                              }}
-                            >
-                              <source
-                                src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/sign/docs-wiser-corp/video-2-mulher.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8wZmZiNWI3ZC0wNWJkLTQxNTQtYTFlZS1kM2Y5MWFhMjc4ZDIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2NzLXdpc2VyLWNvcnAvdmlkZW8tMi1tdWxoZXIubXA0IiwiaWF0IjoxNzYzNzgyODI4LCJleHAiOjIxMTA2Nzg4Mjh9.RjvXbGnwgLN_ws557yNBAs8Phya7qtb6dtLYAlIBL5w"
-                                type="video/mp4"
-                              />
-                              Seu navegador não suporta vídeos HTML5.
-                            </video>
+                            <LazyVideo
+                              src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/sign/docs-wiser-corp/video-2-mulher.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8wZmZiNWI3ZC0wNWJkLTQxNTQtYTFlZS1kM2Y5MWFhMjc4ZDIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2NzLXdpc2VyLWNvcnAvdmlkZW8tMi1tdWxoZXIubXA0IiwiaWF0IjoxNzYzNzgyODI4LCJleHAiOjIxMTA2Nzg4Mjh9.RjvXbGnwgLN_ws557yNBAs8Phya7qtb6dtLYAlIBL5w"
+                              className="w-full h-full"
+                            />
                           </div>
                         </CardContent>
                       </Card>

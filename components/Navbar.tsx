@@ -73,13 +73,15 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#"
-            className="text-white font-headings font-normal text-lg md:text-xl transition-colors hover:text-accent-primary"
+            className="flex items-center justify-center w-10 h-10 bg-white rounded-lg transition-all hover:shadow-lg hover:shadow-white/30"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            WISER CORPORATE
+            <span className="font-headings font-bold text-black text-xl">
+              W
+            </span>
           </a>
 
           {/* Desktop Menu */}

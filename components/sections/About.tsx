@@ -3,11 +3,15 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import Image from "next/image";
+import CountUp from 'react-countup';
+import { TextReveal } from '@/components/TextReveal';
 
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const statsRef = useRef(null);
+  const isStatsInView = useInView(statsRef, { once: true, margin: "-100px" });
 
   return (
     <section
@@ -24,15 +28,15 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-left lg:order-2"
           >
-            <h2 className="font-headings font-medium text-white mb-6 md:mb-8
-              text-[28px] leading-[34px]
-              md:text-[36px] md:leading-[44px]
-              lg:text-[44px] lg:leading-[52px]
-              xl:text-[52px] xl:leading-[60px]
-              tracking-tight">
-              Especialistas em comunicação inteligente para empresas que querem
-              escalar
-            </h2>
+            <TextReveal
+              text="Somos especialistas em comunicação inteligente para empresas que querem escalar"
+              className="font-headings font-medium mb-6 md:mb-8
+                text-[28px] leading-[34px]
+                md:text-[36px] md:leading-[44px]
+                lg:text-[44px] lg:leading-[52px]
+                xl:text-[52px] xl:leading-[60px]
+                tracking-tight"
+            />
 
             <div className="space-y-6 text-white/80 font-body text-left
               text-sm leading-relaxed
@@ -55,41 +59,63 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Imagem com informações - Desktop à esquerda, Mobile abaixo do texto */}
+          {/* Card WISER CORPORATE e Stats - Desktop à esquerda, Mobile abaixo do texto */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
             transition={{ duration: 0.6 }}
-            className="relative max-w-md mx-auto lg:mx-0 lg:order-1 mt-8 lg:mt-0"
+            className="relative max-w-md mx-auto lg:mx-0 lg:order-1 mt-8 lg:mt-0 space-y-4"
           >
-            <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden" style={{ minHeight: '400px' }}>
-              <Image
-                src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/sign/docs-wiser-corp/img-diego-sobre.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8wZmZiNWI3ZC0wNWJkLTQxNTQtYTFlZS1kM2Y5MWFhMjc4ZDIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2NzLXdpc2VyLWNvcnAvaW1nLWRpZWdvLXNvYnJlLmpwZWciLCJpYXQiOjE3NjM3NzExNjQsImV4cCI6MjExMDY2NzE2NH0.O6qaDOPBtf_2iwd_1qEjGF8IZ2kmQwgWTVVeL0U8nzQ"
-                alt="Diego Castro - Fundador e CEO"
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 450px"
-                className="object-cover"
-                priority
-              />
-
-              {/* Overlay com gradiente */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-              {/* Informações sobre a imagem */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                <p className="text-white/90 font-body text-sm md:text-base leading-relaxed mb-4">
-                  Especialista em comunicação empresarial e automação com IA. Mais de 8 anos liderando projetos de transformação digital...
-                </p>
-                <div>
-                  <p className="text-white font-semibold font-body text-sm md:text-base">
-                    Diego Castro
-                  </p>
-                  <p className="text-white/70 font-body text-xs md:text-sm">
-                    Fundador e CEO
-                  </p>
-                </div>
-              </div>
+            <div className="relative w-full rounded-2xl overflow-hidden bg-white flex items-center justify-center py-12 md:py-16 px-8">
+              <h3 className="font-headings font-normal bg-gradient-to-br from-[#141A24] to-[#000101] bg-clip-text text-transparent
+                text-[28px] leading-[34px]
+                md:text-[32px] md:leading-[38px]
+                lg:text-[36px] lg:leading-[42px]
+                tracking-tight text-center whitespace-nowrap">
+                WISER CORPORATE
+              </h3>
             </div>
+
+            {/* Stats Cards */}
+            <motion.div
+              ref={statsRef}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="grid grid-cols-1 gap-4"
+            >
+              {[
+                { prefix: "+R$ ", value: 50, suffix: "M", label: "em receita gerada" },
+                { prefix: "", value: 98, suffix: "%", label: "satisfação dos clientes" },
+                { prefix: "+", value: 8, suffix: " anos", label: "de experiência" },
+              ].map((stat, index) => (
+                <div
+                  key={index}
+                  className="text-center p-6 rounded-xl bg-gradient-to-br from-card-bg-start/30 to-card-bg-end/30 border border-card-border/30 backdrop-blur-sm"
+                >
+                  <div className="text-2xl md:text-3xl lg:text-4xl font-headings font-bold text-white mb-2">
+                    {isStatsInView ? (
+                      <>
+                        {stat.prefix}
+                        <CountUp
+                          start={0}
+                          end={stat.value}
+                          duration={2.5}
+                          separator="."
+                          decimal=","
+                        />
+                        {stat.suffix}
+                      </>
+                    ) : (
+                      `${stat.prefix}${stat.value}${stat.suffix}`
+                    )}
+                  </div>
+                  <div className="text-sm md:text-base font-body text-white/70">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </motion.div>
           </motion.div>
         </div>
       </div>

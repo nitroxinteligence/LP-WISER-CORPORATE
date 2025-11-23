@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Check, ArrowRight } from "lucide-react";
+import { MorphingText } from '@/components/MorphingText';
 
 const benefits = [
   "Consultoria gratuita de 30 minutos",
@@ -28,20 +29,22 @@ export default function CTAFinal() {
 
       <div className="container mx-auto max-w-5xl relative z-10">
         {/* Title outside container */}
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.6 }}
-          className="font-headings font-medium text-white text-center mb-12 md:mb-16
-            text-[32px] leading-[38px]
-            md:text-[40px] md:leading-[48px]
-            lg:text-[48px] lg:leading-[56px]
-            tracking-tight"
+          className="text-center mb-12 md:mb-16"
         >
-          Mais conversões.<br />
-          Menos custos.<br />
-          Comunicação inteligente.
-        </motion.h2>
+          <MorphingText
+            words={["Mais conversões.", "Menos custos.", "Comunicação inteligente."]}
+            interval={3000}
+            className="font-headings font-medium text-white
+              text-[32px] leading-[38px]
+              md:text-[40px] md:leading-[48px]
+              lg:text-[48px] lg:leading-[56px]
+              tracking-tight"
+          />
+        </motion.div>
 
         {/* Container for content with white background */}
         <motion.div

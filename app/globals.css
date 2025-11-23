@@ -93,6 +93,11 @@
 /* Smooth Scroll */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* Custom Scrollbar */
