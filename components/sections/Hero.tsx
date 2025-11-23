@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full" aria-hidden="true">
         <Image
-          src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/sign/docs-wiser-corp/img-2-bg-wiser-corp.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8wZmZiNWI3ZC0wNWJkLTQxNTQtYTFlZS1kM2Y5MWFhMjc4ZDIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2NzLXdpc2VyLWNvcnAvaW1nLTItYmctd2lzZXItY29ycC5wbmciLCJpYXQiOjE3NjM4NTU2NTgsImV4cCI6MjExMDc1MTY1OH0.AkFlnlFUn96glH-ru4BKwHxn5ZDzz6OR6mSb_slnQ8g"
+          src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/public/docs-wiser-corp/img-2-bg-wiser-corp.png"
           alt="Escritório moderno com tecnologia de comunicação empresarial inteligente"
           fill
           priority

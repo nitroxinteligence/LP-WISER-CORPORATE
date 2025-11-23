@@ -390,7 +390,7 @@ export default function Solutions() {
                         <CardContent className="relative p-0 overflow-hidden rounded-[11px]">
                           <div className="w-full aspect-video max-h-[450px]">
                             <LazyVideo
-                              src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/sign/docs-wiser-corp/video-1-homem.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8wZmZiNWI3ZC0wNWJkLTQxNTQtYTFlZS1kM2Y5MWFhMjc4ZDIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2NzLXdpc2VyLWNvcnAvdmlkZW8tMS1ob21lbS5tcDQiLCJpYXQiOjE3NjM3ODM4ODgsImV4cCI6MjExMDY3OTg4OH0.A_STL1QQeG4lXDxSSixHCNvTgjUOhWyTAf4H0M5_XXE"
+                              src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/public/docs-wiser-corp/video-1-homem.mp4"
                               className="w-full h-full"
                             />
                           </div>
@@ -586,7 +586,7 @@ export default function Solutions() {
                         <CardContent className="relative p-0 overflow-hidden rounded-[11px]">
                           <div className="w-full aspect-video max-h-[450px]">
                             <LazyVideo
-                              src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/sign/docs-wiser-corp/video-2-mulher.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8wZmZiNWI3ZC0wNWJkLTQxNTQtYTFlZS1kM2Y5MWFhMjc4ZDIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2NzLXdpc2VyLWNvcnAvdmlkZW8tMi1tdWxoZXIubXA0IiwiaWF0IjoxNzYzNzgyODI4LCJleHAiOjIxMTA2Nzg4Mjh9.RjvXbGnwgLN_ws557yNBAs8Phya7qtb6dtLYAlIBL5w"
+                              src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/public/docs-wiser-corp/video-2-mulher.mp4"
                               className="w-full h-full"
                             />
                           </div>

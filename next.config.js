@@ -6,9 +6,18 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'ckwjxuxatlqnuxbfltul.supabase.co',
         port: '',
-        pathname: '/storage/v1/object/**',
+        pathname: '/storage/v1/object/public/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ckwjxuxatlqnuxbfltul.supabase.co',
+        port: '',
+        pathname: '/storage/v1/object/sign/**',
       },
     ],
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 }
 

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   keywords: ["comunicação omnichannel", "automação", "IA", "WhatsApp API", "CRM", "marketing digital"],
   authors: [{ name: "Wiser Corporate" }],
   icons: {
-    icon: "https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/sign/docs-wiser-corp/Logo%20-%20WISER%20CORP.svg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8wZmZiNWI3ZC0wNWJkLTQxNTQtYTFlZS1kM2Y5MWFhMjc4ZDIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJkb2NzLXdpc2VyLWNvcnAvTG9nbyAtIFdJU0VSIENPUlAuc3ZnIiwiaWF0IjoxNzYzNzg0NDI0LCJleHAiOjIxMTA2ODA0MjR9.eia4DJuCBWIOuyO-qhBw1LuzJ51tjSIkFBf0eHjO4GE",
+    icon: "https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/public/docs-wiser-corp/Logo%20-%20WISER%20CORP.svg",
   },
   openGraph: {
     title: "Wiser Corporate - Conectamos canais. Automatizamos resultados.",
