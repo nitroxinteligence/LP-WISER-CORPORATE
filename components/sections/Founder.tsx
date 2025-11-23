@@ -35,7 +35,6 @@ export default function Founder() {
                   alt="Diego Castro - Founder & CEO Wiser Corporate"
                   fill
                   className="object-cover object-top"
-                  loading="lazy"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
                   quality={85}
                   placeholder="blur"
