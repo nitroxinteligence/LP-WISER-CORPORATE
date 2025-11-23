@@ -15,9 +15,9 @@ export default function Hero() {
           src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/public/docs-wiser-corp/reduz-img-2-bg-wiser-corp.webp"
           alt="Escritório moderno com tecnologia de comunicação empresarial inteligente"
           fill
-          loading="eager"
+          priority
           className="object-cover object-[80%_center] md:object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1920px) 100vw, 1920px"
+          sizes="100vw"
           quality={85}
         />
 

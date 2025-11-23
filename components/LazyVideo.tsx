@@ -25,7 +25,7 @@ export function LazyVideo({ src, poster, className = "" }: LazyVideoProps) {
           }
         });
       },
-      { rootMargin: "200px" }
+      { rootMargin: "100px" } // Otimizado: reduzido de 200px
     );
 
     if (containerRef.current) {
@@ -73,7 +73,7 @@ export function LazyVideo({ src, poster, className = "" }: LazyVideoProps) {
           loop
           playsInline
           muted
-          preload="metadata"
+          preload="none"
           poster={poster}
           className="w-full h-full object-cover rounded-[11px]"
         >
