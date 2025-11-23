@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="absolute inset-0 w-full h-full" aria-hidden="true">
         {/* Mobile: posição 80% center | Desktop: center center */}
         <Image
-          src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/public/docs-wiser-corp/img-2-bg-wiser-corp.png"
+          src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/public/docs-wiser-corp/reduz-img-2-bg-wiser-corp.webp"
           alt="Escritório moderno com tecnologia de comunicação empresarial inteligente"
           fill
           loading="eager"
