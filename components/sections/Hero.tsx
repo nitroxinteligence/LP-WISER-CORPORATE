@@ -10,16 +10,15 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center pt-16 md:pt-20 lg:pt-24 pb-32 md:pb-40 lg:pb-48 px-4 md:px-6 lg:px-8 overflow-hidden bg-black">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full" aria-hidden="true">
+        {/* Mobile: posição 80% center | Desktop: center center */}
         <Image
           src="https://ckwjxuxatlqnuxbfltul.supabase.co/storage/v1/object/public/docs-wiser-corp/img-2-bg-wiser-corp.png"
           alt="Escritório moderno com tecnologia de comunicação empresarial inteligente"
           fill
-          priority
+          loading="eager"
           className="object-cover object-[80%_center] md:object-center"
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1920px) 100vw, 1920px"
           quality={85}
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVR4nAEnANj/ALGxsbGxsbGxsQCxsbGxsbGxsbEAsbGxsbGxsbGxALGxsbGxsbGxseDqBrMcork2AAAAAElFTkSuQmCC"
         />
 
         {/* Overlay gradientes otimizados para mobile e desktop */}
