@@ -73,7 +73,7 @@ export function LazyVideo({ src, poster, className = "" }: LazyVideoProps) {
           loop
           playsInline
           muted
-          preload="none"
+          preload="auto"
           poster={poster}
           className="w-full h-full object-cover rounded-[11px]"
         >
